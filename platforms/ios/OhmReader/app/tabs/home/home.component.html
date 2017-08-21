@@ -1,0 +1,26 @@
+<ScrollView row="0" col="0">
+    <StackLayout orientation="vertical">
+        <Label text="Ohm's Law Calculator" class="h1 p-5 m-5 text-center"></Label>
+
+        <Image src="~/Images/ohm.png"
+            stretch="aspectFill" width="125" height="125" class="img-rounded"></Image>
+
+        <Label text="Resitance:" id="resitance-text" text-Wrap="true" class="h3 p-15 m-15 text-left"></Label> 
+            <TextField class="input input-border text-left" id="resitance" hint="Resitance: eg. 0.1" row="2" col="2"></TextField>
+
+        <Label text="Volts:" id="volts-text" class="h3 p-15 m-15 text-left"></Label>
+            <TextField class="input input-border text-left" id="volts" hint="Volts: eg. 4.2" row="2" col="2"></TextField>
+    </StackLayout>
+</ScrollView>
+
+<StackLayout>
+    <Button id="calculate-btn" class="btn btn-primary" text="Calculate" (tap)="calculateOhms()"></Button>
+    <Button id="reset-btn" class="btn btn-primary" text="Reset" (tap)="clearTextFields()"></Button>
+</StackLayout>
+
+<ScrollView row="0" col="0">
+    <StackLayout>
+        <Label class="amps-label" text="Amps" class="h3 p-5 m-5 text-center"></Label>
+        <Label id="amps-text" class="h2 text-center"></Label>
+    </StackLayout>  
+</ScrollView>
